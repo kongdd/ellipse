@@ -42,7 +42,7 @@ fitted parameters.
 \examples{
 # Plot an approximate 95\% confidence region for the weight and displacement
 # parameters in the Michaelis Menten model
-library(nls)
+require(nls)
 data(Puromycin)
 fit <- nls(rate ~ Vm*conc/(K + conc), data = Puromycin, subset = state=="treated", 
     start = list(K = 0.05, Vm = 200))

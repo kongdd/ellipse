@@ -1,3 +1,2 @@
-"ellipse" <-
-  function (x, ...) 
+"ellipse" <-function (x, ...) 
   UseMethod("ellipse")

@@ -1,6 +1,6 @@
 "ellipse.profile" <-
   function (x, which = c(1, 2), level = 0.95, t = sqrt(qchisq(level, 
-                                                2)), npoints = 100) 
+                                                2)), npoints = 100, ...) 
 {
   aa <- x[[which[1]]][[2]][, which[1]]
   ar <- x[[which[1]]][[2]][, which[2]]

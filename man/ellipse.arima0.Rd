@@ -36,10 +36,10 @@ The \code{summary} function is used to obtain the approximate covariance matrix 
 fitted parameters.
 }
 \seealso{
-\code{\link{ellipse.default}}
+\code{\link{ellipse}}
 }
 \examples{
-library(ts)
+require(ts)
 data(USAccDeaths)
 fit <- arima0(USAccDeaths, order = c(0, 1, 1), seasonal = list(order = c(0, 1, 1)))
 # Plot the approximate 95\% confidence region for the first two parameters

@@ -1,56 +1,65 @@
 \name{ellipse.profile.nls}
 \alias{ellipse.profile.nls}
-\title{Profile sketch }
+\title{
+Pairwise profile sketch
+}
 \description{
-This is the version of ellipse.profile specific to profiles from nls objects.  See ellipse.profile for the description.
+This routine approximates a pairwise confidence region for a nonlinear regression
+model.
 }
 \usage{
-\method{ellipse}{profile.nls}(x, level = 0.95, t = sqrt(2 * qf(level, 2, attr(x, "summary")$df[2])), 
-    \dots)
+\method{ellipse}{profile.nls}(x, which = c(1, 2), level = 0.95, t = sqrt(2 * qf(level, 2, attr(x, "summary")$df[2])), 
+    npoints = 100, \dots)
 }
-
-\item{x}{An object of class \code{profile.nls}, generally the result of the
-    profile() function}
-
-\item{labels}{The labels to use for each variable.  These default to the
-    variable names.}
-
-\item{panel}{The function to use to draw the sketch in each panel.}
-
-\item{invert}{Whether to swap the axes so things look better.}
-
-\item{plot.tau}{Whether to do the profile tau (profile t) plots.}
-
-\item{plot.trace}{Whether to do the profile trace plots.}
-
-\item{plot.sketch}{Whether to do the profile sketch plots.}
-
-\item{plot.ellipse}{Whether to do the ellipse approximations.}
-
-\item{level}{The nominal confidence level for the profile sketches and
-    ellipses.}
-
-\item{\dots}{Other plotting parameters.}
-
-
+\arguments{
+\item{x}{
+An object of class \code{\link{profile.nls}}.
+}
+\item{which}{
+Which pair of parameters to use.
+}
+\item{level}{
+The \code{level} argument
+specifies the confidence level for an asymptotic confidence region.
+}
+\item{t}{
+The square root of the value to be contoured.
+}
+\item{npoints}{
+How many points to use in the ellipse.
+}
+\item{\dots}{
+Extra parameters which are not used (for compatibility with the generic).
+}
+}
+\value{
+An \code{npoints} x \code{2} matrix with columns having the chosen parameter names, 
+which approximates a contour of the function that was profiled.
+}
 \details{
-Produces a plot on the current device for each pair of variables in the profile object.
-This function implements the plots used in Bates and Watts (1988) for nonlinear regression diagnostics.
+This function uses the 4 point approximation to the contour as described
+in Appendix 6 of Bates and Watts (1988).  It produces the exact contour for
+quadratic surfaces, and good approximations for mild deviations from
+quadratic.  If the surface is multimodal, the algorithm is likely to
+produce nonsense.
 }
-\seealso{\code{\link{profile}}, \code{\link{ellipse.profile}}, \code{\link{ellipse.nls}}}
-\references{Bates and Watts (1988), Nonlinear Regression Analysis & its
-    Applications.}
+\references{
+Bates and Watts (1988) Nonlinear Regression Analysis \& its Applications
+}
+\seealso{
+\code{\link{profile}}, \code{\link{ellipse.nls}}
+}
 \examples{
- # Plot everything for the Puromycin data
-library(nls)
+# Plot an approximate 95\% confidence region for the Puromycin
+# parameters Vm and K, and overlay the ellipsoidal region
+require(nls)
 data(Puromycin)
-Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))* conc)/(K + conc), 
-    data = Puromycin, start = list(Vm = 160, delV = 40, K = 0.05))
+Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))
+  * conc)/(K + conc), data = Puromycin,
+  start = list(Vm = 160, delV = 40, K = 0.05))
 Pur.prof <- profile(Purboth)
-pairs(Pur.prof, plot.ellipse = TRUE)
+plot(ellipse(Pur.prof, which = c('Vm', 'K')), type = 'l')
+lines(ellipse(Purboth, which = c('Vm', 'K')), lty = 2)
 }
 \keyword{dplot}
-\keyword{nonlinear}
-
-
-
+\keyword{models}

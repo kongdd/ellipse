@@ -1,4 +1,6 @@
 This package contains ellipse drawing routines designed for pairwise
-confidence intervals, including distorted ellipses for nonlinear
-regression intervals.  It also includes a routine "plotcorr" for 
+confidence regions, including distorted ellipses for nonlinear
+regression regions.  It also includes a routine "plotcorr" for 
 plotting correlation matrices using ellipses.
+
+The examples require the MASS, nls and ts packages.
