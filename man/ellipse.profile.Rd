@@ -50,6 +50,7 @@ profile, ms, ellipse.nls
 \examples{
 # Plot an approximate 95\% confidence region for the Puromycin
 # parameters Vm and K, and overlay the ellipsoidal region
+library(nls)
 data(Puromycin)
 Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))
   * conc)/(K + conc), data = Puromycin,

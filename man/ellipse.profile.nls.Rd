@@ -45,6 +45,7 @@ This function implements the plots used in Bates and Watts (1988) for nonlinear 
     Applications.}
 \examples{
  # Plot everything for the Puromycin data
+library(nls)
 data(Puromycin)
 Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))* conc)/(K + conc), data = Puromycin,start = list(Vm = 160, delV = 40, K = 0.05))
  Pur.prof <- profile(Purboth)

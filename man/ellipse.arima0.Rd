@@ -1,19 +1,19 @@
-\name{ellipse.nls}
-\alias{ellipse.nls}
+\name{ellipse.arima0}
+\alias{ellipse.arima0}
 \title{
 Outline an approximate pairwise confidence region 
 }
 \description{
 This function produces the ellipsoidal outline of an approximate 
-pairwise confidence region for a nonlinear model fit.
+pairwise confidence region for an arima model fit.
 }
 \usage{
-ellipse.nls(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, s$df[2])), \dots)
+ellipse.arima0(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, s$df[2])), \dots)
 }
 \arguments{
 \item{x}{
-The first argument should be an nls object, usually resulting from a call
-to nls().
+The first argument should be an arima object, usually resulting from a call
+to arima.mle().
 }
 \item{which}{
 Which selects the pair of parameters to be plotted.  The default is the
@@ -36,15 +36,16 @@ The summary function is used to obtain the approximate covariance matrix of the
 fitted parameters.
 }
 \seealso{
-ellipse.default, ellipse.profile
+ellipse.default
 }
 \examples{
-# Plot an approximate 95\% confidence region for the weight and displacement
-# parameters in the Michaelis Menten model
-library(nls)
-data(Puromycin)
-fit <- nls(rate~Vm*conc/(K+conc),data=Puromycin,subset=state=="treated",start=list(K=0.05,Vm=200))
+library(ts)
+data(USAccDeaths)
+fit <- arima0(USAccDeaths, order=c(0,1,1), seasonal=list(order=c(0,1,1)))
+# Plot the approximate 95\% confidence region for the first two parameters
+# of the model
 plot(ellipse(fit))
 }
 \keyword{ellipse}
 % Converted by Sd2Rd version 0.3-3.
+

@@ -60,6 +60,7 @@ profile, ellipse.profile, ellipse.nls
 }
 \examples{
  # Plot everything for the Puromycin data
+ library(nls)
  data(Puromycin)
  Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))
    * conc)/(K + conc), data = Puromycin,
