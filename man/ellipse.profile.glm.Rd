@@ -57,7 +57,6 @@ Bates and Watts (1988) Nonlinear Regression Analysis \& its Applications
 \examples{
 ## MASS has a pairs.profile function that conflicts with ours, so
 ## do a little trickery here
-
 	 noMASS <- is.na(match('package:MASS', search()))
 	 if (noMASS) require(MASS)
 

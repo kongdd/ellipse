@@ -62,7 +62,6 @@ Applications.
 }
 \examples{
  # Plot everything for the Puromycin data
- require(nls)
  data(Puromycin)
  Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))
    * conc)/(K + conc), data = Puromycin,
