@@ -26,18 +26,13 @@ A matrix is returned with two columns outlining an ellipse or a
 confidence region.
 }
 \seealso{
-ellipse.arima, plotcorr
+\code{\link{ellipse.lm}}, \code{\link{plotcorr}}
 }
 \examples{
 # Plot an ellipse corresponding to a 95\% probability region for a
 # bivariate normal distribution with mean 0, unit variances and 
 # correlation 0.8.
 plot(ellipse(0.8),type='l')
-# Plot the joint 95\% confidence region for the weight and displacement
-# parameters in the Fuel dataset
-data(fuel.frame)
-fit <- lm(Fuel ~ . , fuel.frame)
-plot(ellipse(fit,which=c('Weight','Disp.')),type='l')
 }
 \keyword{ellipse}
 % Converted by Sd2Rd version 0.3-3.

@@ -8,7 +8,7 @@ This function produces pairwise plots of profile traces, profile
 sketches, and ellipse approximations to confidence intervals.
 }
 \usage{
-pairs.profile.nls(x, labels=c(names(x), "Profile tau"), panel=lines, invert=TRUE, plot.tau=TRUE, plot.trace=TRUE, plot.sketch=TRUE, plot.ellipse=FALSE, level=0.95, \dots)
+\method{pairs}{profile.nls}(x, labels=c(names(x), "Profile tau"), panel=lines, invert=TRUE, plot.tau=TRUE, plot.trace=TRUE, plot.sketch=TRUE, plot.ellipse=FALSE, level=0.95, \dots)
 }
 \arguments{
 \item{x}{
@@ -56,7 +56,7 @@ Bates and Watts (1988), Nonlinear Regression Analysis \& its
 Applications.
 }
 \seealso{
-profile, ellipse.profile, ellipse.nls
+\code{\link{profile}}, \code{\link{ellipse.profile}}, \code{\link{ellipse.nls}}
 }
 \examples{
  # Plot everything for the Puromycin data

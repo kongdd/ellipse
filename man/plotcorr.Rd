@@ -10,7 +10,7 @@ bivariate normal with the matching correlation.  It works best with the
 postscript output device.
 }
 \usage{
-plotcorr(corr, outline=TRUE, dev=FALSE, col=4, paropts=NULL, numbers=FALSE, \dots)
+plotcorr(corr, outline=TRUE, dev=FALSE, col="grey", paropts=NULL, numbers=FALSE, \dots)
 }
 \arguments{
 \item{corr}{
@@ -58,7 +58,7 @@ If dev specifies a graphics device, then
 this will open it. 
 If dev is "postscript", installs two ellipse-shaped fonts into the 
 postscript preamble:  an outline font in the second last position, and a solid
-font in the last position.  
+font in the last position.   [Not implemented in this version]
 Produces a plot of the correlations on the given device or on the
 current device.
 }
@@ -71,12 +71,12 @@ the ellipse() function.  Postscript output is much, much faster than
 other devices.
 }
 \seealso{
-ellipse.preamble, ellipse
+\code{\link{ellipse}}
 }
 \examples{
-# Plot the correlation matrix for the fuel data fit 
-data(fuel.frame)
-fit <- lm(Fuel ~ ., fuel.frame)
+# Plot the correlation matrix for the mtcars data full model fit 
+data(mtcars)
+fit <- lm(mpg ~ ., mtcars)
 plotcorr(summary(fit,correlation=T)$correlation)
 # Plot a second figure to the same file, with numbers in place of the
 # ellipses

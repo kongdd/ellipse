@@ -59,13 +59,13 @@ correlation matrices.  Mathematical preprint \#1994-09, Department of
 Mathematics and Statistics, Queen's University, Kingston, Canada.
 }
 \seealso{
-ellipse
+\code{\link{ellipse}}
 }
 \examples{
 #  Make a 2 x 2 covariance matrix, and plot the corresponding 95\%
 #  confidence region
 cov <- matrix(c(1,0.5,0.5,1), 2,2)
-plot(ellipse(cov))
+plot(ellipse(cov), type='l')
 }
 \keyword{ellipse}
 % Converted by Sd2Rd version 0.3-3.

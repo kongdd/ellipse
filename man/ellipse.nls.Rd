@@ -8,7 +8,7 @@ This function produces the ellipsoidal outline of an approximate
 pairwise confidence region for a nonlinear model fit.
 }
 \usage{
-ellipse.nls(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, s$df[2])), \dots)
+\method{ellipse}{nls}(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, s$df[2])), \dots)
 }
 \arguments{
 \item{x}{
@@ -36,15 +36,15 @@ The summary function is used to obtain the approximate covariance matrix of the
 fitted parameters.
 }
 \seealso{
-ellipse.default, ellipse.profile
+\code{\link{ellipse.default}}, \code{\link{ellipse.profile}}
 }
 \examples{
 # Plot an approximate 95\% confidence region for the weight and displacement
 # parameters in the Michaelis Menten model
 library(nls)
 data(Puromycin)
-fit <- nls(rate~Vm*conc/(K+conc),data=Puromycin,subset=state=="treated",start=list(K=0.05,Vm=200))
-plot(ellipse(fit))
+fit <- nls(rate~Vm*conc/(K+conc), data=Puromycin, subset=state=="treated", start=list(K=0.05,Vm=200))
+plot(ellipse(fit), type='l')
 }
 \keyword{ellipse}
 % Converted by Sd2Rd version 0.3-3.

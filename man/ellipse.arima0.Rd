@@ -8,7 +8,7 @@ This function produces the ellipsoidal outline of an approximate
 pairwise confidence region for an arima model fit.
 }
 \usage{
-ellipse.arima0(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, s$df[2])), \dots)
+\method{ellipse}{arima0}(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, s$df[2])), \dots)
 }
 \arguments{
 \item{x}{
@@ -36,7 +36,7 @@ The summary function is used to obtain the approximate covariance matrix of the
 fitted parameters.
 }
 \seealso{
-ellipse.default
+\code{\link{ellipse.default}}
 }
 \examples{
 library(ts)
@@ -44,7 +44,9 @@ data(USAccDeaths)
 fit <- arima0(USAccDeaths, order=c(0,1,1), seasonal=list(order=c(0,1,1)))
 # Plot the approximate 95\% confidence region for the first two parameters
 # of the model
-plot(ellipse(fit))
+plot(ellipse(fit),type='l')
+points(fit$coef[1],fit$coef[2])
+
 }
 \keyword{ellipse}
 % Converted by Sd2Rd version 0.3-3.

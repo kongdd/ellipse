@@ -1,9 +1,9 @@
 "plotcorr" <-
-  function (corr, outline = T, dev = T, col = 4, paropts = NULL, 
+  function (corr, outline = T, dev = T, col = 'grey', paropts = NULL, 
             numbers = F, ...) 
 {
   if (deparse(substitute(dev)) == "postscript") {
-    cat("feature not still implemented in ellipse for R, sorry\n")
+    cat("feature not yet implemented in ellipse for R, sorry\n")
 #    postscript(preamble = ps.preamble.ellipse, font = ps.fonts.ellipse, 
 #               ...)
 #    assign("ellipse.fontnum", length(ps.fonts.ellipse), where = 0)

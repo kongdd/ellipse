@@ -1,6 +1,4 @@
-This section contains ellipse drawing routines designed for pairwise
+This package contains ellipse drawing routines designed for pairwise
 confidence intervals, including distorted ellipses for nonlinear
-regression intervals.  It also includes a fix for profile.ms that
-is needed by pairs.profile.ms, which is installed in the temporary
-database 0 by .First.lib, and a routine "plotcorr" for plotting correlation
-matrices using ellipses.
+regression intervals.  It also includes a routine "plotcorr" for 
+plotting correlation matrices using ellipses.

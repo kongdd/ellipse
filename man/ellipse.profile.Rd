@@ -8,7 +8,7 @@ This routine approximates a contour of a function based on the profile
 of that function.
 }
 \usage{
-ellipse.profile(x, which=c(1, 2), level=0.95, t=sqrt(qchisq(level, 2)), npoints=100)
+\method{ellipse}{profile}(x, which=c(1, 2), level=0.95, t=sqrt(qchisq(level, 2)), npoints=100)
 }
 \arguments{
 \item{x}{
@@ -45,7 +45,7 @@ produce nonsense.
 Bates and Watts (1988) Nonlinear Regression Analysis \& its Applications
 }
 \seealso{
-profile, ms, ellipse.nls
+\code{\link{profile}}, \code{\link{ellipse.nls}}
 }
 \examples{
 # Plot an approximate 95\% confidence region for the Puromycin

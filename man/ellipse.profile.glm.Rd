@@ -8,7 +8,7 @@ This is the version of ellipse.profile specific to profiles from glm
 objects.  See ellipse.profile for the description.
 }
 \usage{
-ellipse.profile.glm(x, level=0.95, t,\dots)
+\method{ellipse}{profile.glm}(x, level=0.95, t,\dots)
 }
 \details{
 The t parameter is optional.  It defaults to a contour based on the

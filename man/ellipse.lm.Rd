@@ -8,7 +8,7 @@ This function produces the ellipsoidal outline of a pairwise confidence
 region for a linear model fit.
 }
 \usage{
-ellipse.lm(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, x$df.residual)), \dots)
+\method{ellipse}{lm}(x, which=c(1, 2), level=0.95, t=sqrt(2 * qf(level, 2, x$df.residual)), \dots)
 }
 \arguments{
 \item{x}{
@@ -36,14 +36,15 @@ The summary function is used to obtain the covariance matrix of the
 fitted parameters.
 }
 \seealso{
-ellipse.default
+\code{\link{ellipse.default}}
 }
 \examples{
-# Plot the joint 95\% confidence region for the weight and displacement
-# parameters in the Fuel dataset
-data(fuel.frame)
-fit <- lm(Fuel ~ . , fuel.frame)
-plot(ellipse(fit,which=c('Weight','Disp.')))
+# Plot the estimate and joint 90\% confidence region for the displacement and cylinder
+# count linear coefficients in the mtcars dataset
+data(mtcars)
+fit <- lm(mpg ~ disp + cyl , mtcars)
+plot(ellipse(fit,which=c('disp','cyl'),level=0.90), type='l')
+points(fit$coefficients['disp'], fit$coefficients['cyl'])
 }
 \keyword{ellipse}
 % Converted by Sd2Rd version 0.3-3.

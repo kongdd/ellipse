@@ -5,8 +5,7 @@
 This is the version of ellipse.profile specific to profiles from nls objects.  See ellipse.profile for the description.
 }
 \usage{
-ellipse.profile.nls(x, level=0.95, t=sqrt(2 * qf(level, 2, attr(x,"su
-mmary")$df[2])), ...)
+\method{ellipse}{profile.nls}(x, level=0.95, t=sqrt(2 * qf(level, 2, attr(x,"summary")$df[2])), ...)
 }
 
 \item{x}{An object of class profile, generally the result of the
@@ -40,7 +39,7 @@ mmary")$df[2])), ...)
 Produces a plot on the current device for each pair of variables in the profile object.
 This function implements the plots used in Bates and Watts (1988) for nonlinear regression diagnostics.
 }
-\seealso{profile, ellipse.profile, ellipse.nls}
+\seealso{\code{\link{profile}}, \code{\link{ellipse.profile}}, \code{\link{ellipse.nls}}}
 \references{Bates and Watts (1988), Nonlinear Regression Analysis & its
     Applications.}
 \examples{

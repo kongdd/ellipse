@@ -8,7 +8,7 @@ This function produces the ellipsoidal outline of an approximate
 pairwise confidence region for a generalized linear model fit.
 }
 \usage{
-ellipse.glm(x, which=c(1, 2), level=0.95, t=(see below), \dots)
+\method{ellipse}{glm}(x, which=c(1, 2), level=0.95, t, \dots)
 }
 \arguments{
 \item{x}{
@@ -38,12 +38,19 @@ The summary function is used to obtain the approximate covariance matrix of the
 fitted parameters, the dispersion estimate, and the degrees of freedom.
 }
 \seealso{
-ellipse.default
+\code{\link{ellipse.default}}
 }
-\examples{
-data(solder.balance)
-fit <- glm(skips ~ ., data = solder.balance, family = poisson)
-plot(ellipse(fit))
+\examples{     
+# Plot an approximate 95 % confidence region for the TreatCont and TreatFT 
+# coefficients for the MASS anorexia data
+
+library(MASS)
+data(anorexia)
+
+fit <- glm(Postwt ~ Prewt + Treat + offset(Prewt),
+                       family = gaussian, data = anorexia)
+plot(ellipse(fit, which=c('TreatCont', 'TreatFT')), type='l')
+points(fit$coefficients['TreatCont'], fit$coefficients['TreatFT'])
 }
 \keyword{ellipse}
-% Converted by Sd2Rd version 0.3-3.
+
