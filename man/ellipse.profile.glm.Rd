@@ -13,7 +13,7 @@ model.
 }
 \arguments{
 \item{x}{
-An object of class \code{\link{profile.glm}}.
+An object of class \code{\link[MASS]{profile.glm}}.
 }
 \item{which}{
 Which pair of parameters to use.

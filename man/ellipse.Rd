@@ -60,8 +60,8 @@ The default method uses the
 \code{cos(d)} is the correlation of the parameters.
 }
 \seealso{
-\code{\link{ellipse.lm}}, \code{\link{ellipse.nls}}}, 
-\code{\link{ellipse.profile}, \code{\link{ellipse.profile.nls}},
+\code{\link{ellipse.lm}}, \code{\link{ellipse.nls}}, 
+\code{\link{ellipse.profile}}, \code{\link{ellipse.profile.nls}},
 \code{\link{ellipse.arima0}},
 \code{\link{plotcorr}}
 }

@@ -43,13 +43,14 @@
     rows <- rep(1:rowdim, coldim)
     if (!numbers) {
 	mat <- diag(c(1, 1))
+	col <- rep(col, length = length(cols))
 	for (i in 1:length(cols)) {
 	    mat[1, 2] <- as.vector(corr)[i]
 	    mat[2, 1] <- mat[1, 2]
 	    ell <- ellipse(mat, t = 0.43)
 	    ell[, 1] <- ell[, 1] + cols[i]
 	    ell[, 2] <- ell[, 2] + rowdim + 1 - rows[i]
-	    polygon(ell, col = col)
+	    polygon(ell, col = col[i])
 	    if (outline) lines(ell)
 	}
     }

@@ -8,3 +8,6 @@ The examples require the MASS, nls and ts packages.
 Release History:
 
 0.2.12 (Jan 2004) - Bug fix for missing values in plotcorr, doc error
+
+0.2.14 (Aug 2004) - Allowed separate colors for each ellipse in plotcorr
+		    and fixed some .Rd errors.
