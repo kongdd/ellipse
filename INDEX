@@ -1,0 +1,14 @@
+ellipse                  Make an ellipse
+ellipse.default          Produces an ellipse from a covariance matrix or
+                         a correlation
+ellipse.glm              Outline an approximate pairwise confidence
+                         region
+ellipse.lm               Outline a pairwise confidence region for a
+                         linear model fit.
+ellipse.nls              Outline an approximate pairwise confidence
+                         region
+ellipse.profile          Pairwise profile sketch
+ellipse.profile.glm      Profile sketch
+pairs.profile            Profile pairs
+plotcorr                 Plot correlation matrix ellipses
+profile.glm              profile() for glm objects
