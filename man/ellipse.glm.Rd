@@ -8,12 +8,12 @@ This function produces the ellipsoidal outline of an approximate
 pairwise confidence region for a generalized linear model fit.
 }
 \usage{
-\method{ellipse}{glm}(x, which=c(1, 2), level=0.95, t, \dots)
+\method{ellipse}{glm}(x, which = c(1, 2), level = 0.95, t, \dots)
 }
 \arguments{
 \item{x}{
-The first argument should be an glm object, usually resulting from a call
-to glm().
+The first argument should be a \code{glm} object, usually resulting from a call
+to \code{glm()}.
 }
 \item{which}{
 Which selects the pair of parameters to be plotted.  The default is the
@@ -24,11 +24,11 @@ The confidence level of the region.  Default 95\%.
 }
 \item{t}{
 The t statistic on the boundary of the ellipse.  For Binomial or Poisson
-families, sqrt(qchisq(level,2)) is used; for other distributions,
-sqrt(2*qf(level,2,df)) where df is the residual degrees of freedom.
+families, \code{sqrt(qchisq(level, 2))} is used; for other distributions,
+\code{sqrt(2*qf(level, 2, df))} where \code{df} is the residual degrees of freedom.
 }
-\item{...}{
-Other ellipse.default parameters may also be used.
+\item{\dots}{
+Other \code{ellipse.default} parameters may also be used.
 }}
 \value{
 A matrix with columns named according to which to outline the confidence region.
@@ -49,8 +49,9 @@ data(anorexia)
 
 fit <- glm(Postwt ~ Prewt + Treat + offset(Prewt),
                        family = gaussian, data = anorexia)
-plot(ellipse(fit, which=c('TreatCont', 'TreatFT')), type='l')
+plot(ellipse(fit, which = c('TreatCont', 'TreatFT')), type = 'l')
 points(fit$coefficients['TreatCont'], fit$coefficients['TreatFT'])
 }
-\keyword{ellipse}
+\keyword{dplot}
+\keyword{regression}
 

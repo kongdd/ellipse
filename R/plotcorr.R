@@ -1,6 +1,6 @@
 "plotcorr" <-
-  function (corr, outline = T, dev = T, col = 'grey', paropts = NULL, 
-            numbers = F, ...) 
+  function (corr, outline = TRUE, dev = TRUE, col = 'grey', paropts = NULL, 
+            numbers = FALSE, ...) 
 {
   if (deparse(substitute(dev)) == "postscript") {
     cat("feature not yet implemented in ellipse for R, sorry\n")
@@ -32,18 +32,18 @@
     collabs <- 1:coldim
 #1st change
 #cxy <- par("cxy")
-#cxy[1]<-yinch(par("csi"))
-#cxy[2]<-yinch(par("csi"))
-#cxy<-c(0.57*xinch(par("csi")), yinch(par("csi")))
-  cxy<-par("cin")/par("pin")
+#cxy[1] <- yinch(par("csi"))
+#cxy[2] <- yinch(par("csi"))
+#cxy <- c(0.57*xinch(par("csi")), yinch(par("csi")))
+  cxy <- par("cin")/par("pin")
   xlabwidth <- (max(nchar(rowlabs)) * cxy[1])/cxy[2]
   ylabwidth <- (max(nchar(collabs)) * cxy[1])/cxy[2]
 #  plot(c(-xlabwidth, maxdim + 0.5), c(0.5, maxdim + 1 + ylabwidth), 
-#       type = "n", bty = "n", axes = F, xlab = "", ylab = "",asp=1)
+#       type = "n", bty = "n", axes = FALSE, xlab = "", ylab = "", asp = 1)
   plot(c(-xlabwidth, maxdim + 0.5), c(0.5, maxdim + 1 + ylabwidth), 
-       type = "n", bty = "n", axes = F, xlab = "", ylab = "",asp=1)
+       type = "n", bty = "n", axes = FALSE, xlab = "", ylab = "", asp = 1)
                                         #2nd change
-                                        #par(cex=0.57*par("cex"))
+                                        #par(cex = 0.57*par("cex"))
                                         #par(cex = par("cex")/(par("cxy")[2]))
   text(rep(0, rowdim), rowdim:1, labels = rowlabs, adj = 1)
   text(1:coldim, rep(rowdim + 1, coldim), labels = collabs, 

@@ -8,11 +8,13 @@ This function produces pairwise plots of profile traces, profile
 sketches, and ellipse approximations to confidence intervals.
 }
 \usage{
-\method{pairs}{profile.nls}(x, labels=c(names(x), "Profile tau"), panel=lines, invert=TRUE, plot.tau=TRUE, plot.trace=TRUE, plot.sketch=TRUE, plot.ellipse=FALSE, level=0.95, \dots)
+\method{pairs}{profile.nls}(x, labels = c(names(x), "Profile tau"), panel = lines, invert = TRUE, 
+    plot.tau = TRUE, plot.trace = TRUE, plot.sketch = TRUE, 
+	plot.ellipse = FALSE, level = 0.95, \dots)
 }
 \arguments{
 \item{x}{
-An object of class profile, generally the result of the profile()
+An object of class \code{profile}, generally the result of the \code{profile()}
 function.
 }
 \item{labels}{
@@ -40,7 +42,7 @@ Whether to do the ellipse approximations.
 \item{level}{
 The nominal confidence level for the profile sketches and ellipses.
 }
-\item{...}{
+\item{\dots}{
 Other plotting parameters.
 }}
 \section{Side Effects}{
@@ -66,7 +68,8 @@ Applications.
    * conc)/(K + conc), data = Puromycin,
    start = list(Vm = 160, delV = 40, K = 0.05))
  Pur.prof <- profile(Purboth)
- pairs(Pur.prof, plot.ellipse=TRUE)
+ pairs(Pur.prof, plot.ellipse = TRUE)
 }
-\keyword{~keyword}
-% Converted by Sd2Rd version 0.3-3.
+\keyword{dplot}
+\keyword{regression}
+\keyword{nonlinear}

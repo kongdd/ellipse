@@ -58,7 +58,7 @@
     result
   }
   ad <- matrix(NA, nrow = 5, ncol = 2)
-  ad[1, ] <- getad(1, myapprox(rr, rtau, myapprox(aa, ar, myapprox(atau,aa, 1))))
+  ad[1, ] <- getad(1, myapprox(rr, rtau, myapprox(aa, ar, myapprox(atau, aa, 1))))
   ad[2, ] <- getad(myapprox(aa, atau, myapprox(rr, ra, myapprox(rtau, rr, 1))), 1)
   ad[3, ] <- getad(-1, myapprox(rr, rtau, myapprox(aa, ar, myapprox(atau, aa, -1))))
   ad[4, ] <- getad(myapprox(aa, atau, myapprox(rr, ra, myapprox(rtau, rr, -1))), -1)
@@ -67,7 +67,7 @@
   ad[5, 1] <- ad[1, 1] + 2 * pi
   ad[5, 2] <- ad[1, 2]
   ad <- ad[!duplicated(ad[, 1]), ]
-  adv <- spline(ad,n = npoints,method= "periodic")
+  adv <- spline(ad, n = npoints, method= "periodic")
   avals <- adv$x
   dvals <- adv$y
   matrix(c(myapprox(atau, aa, cos(avals + dvals/2)), myapprox(rtau,  rr, cos(avals - dvals/2))), length(avals), 2, dimnames = list(NULL, names(x[which])))

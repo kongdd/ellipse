@@ -8,17 +8,17 @@ This function returns an ellipse or other outline of a confidence region
 for two parameters.  
 This is a generic function.
 Functions with names beginning in \code{ellipse.} will be
-methods for this function.
-\code{lm}, \code{nls}, \code{profile}, \code{profile.nls}
+methods for this function:
+\code{lm}, \code{nls}, \code{profile}, \code{profile.nls} are currently implemented.
 }
 \usage{
 ellipse(x, \dots)
 }
 \arguments{
 \item{x}{
-An S object.
+An object.
 }
-\item{...}{
+\item{\dots}{
 Each of the specialized types uses different optional parameters.
 }}
 \value{
@@ -32,7 +32,6 @@ confidence region.
 # Plot an ellipse corresponding to a 95\% probability region for a
 # bivariate normal distribution with mean 0, unit variances and 
 # correlation 0.8.
-plot(ellipse(0.8),type='l')
+plot(ellipse(0.8), type = 'l')
 }
-\keyword{ellipse}
-% Converted by Sd2Rd version 0.3-3.
+\keyword{dplot}

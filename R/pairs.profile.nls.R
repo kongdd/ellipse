@@ -1,11 +1,11 @@
 "pairs.profile.nls" <-
   function (x, labels = c(names(x), "Profile tau"), panel = lines, 
-            invert = TRUE, plot.tau = T, plot.trace = T, plot.sketch = T, 
-            plot.ellipse = F, level = 0.95, ...) 
+            invert = TRUE, plot.tau = TRUE, plot.trace = TRUE, plot.sketch = TRUE, 
+            plot.ellipse = FALSE, level = 0.95, ...) 
 {
-  doaxis <- function(which, dolabel = T) axis(which,labels=dolabel) # outer = T, line = -0.5, labels = dolabel)
+  doaxis <- function(which, dolabel = TRUE) axis(which, labels = dolabel) # outer = TRUE, line = -0.5, labels = dolabel)
   setup <- function(x, y, ...) plot(range(x[!is.na(x)]), 
-                                       range(y[!is.na(y)]), type = "n", axes = F, ...)
+                                       range(y[!is.na(y)]), type = "n", axes = FALSE, ...)
   if (is.character(panel)) 
     panel <- get(panel, mode = "function")
   n <- length(x)
@@ -30,15 +30,15 @@
       par(omi = c(dif * n, 0, dif * n, 0) + par("omi"))
     else par(omi = c(0, (-dif) * n, 0, (-dif) * n) + par("omi"))
   }
-  alltau <- unlist(lapply(x, function(x) x[[1]]), use.names = F)
+  alltau <- unlist(lapply(x, function(x) x[[1]]), use.names = FALSE)
   order <- if (invert) 
     1:n
   else n:1
   for (i in order) {
     for (j in 1:n) {
-      if (i<=length(x))
+      if (i <= length(x))
           icomp <- x[[i]]
-      if (j<=length(x))
+      if (j <= length(x))
           jcomp <- x[[j]]
       xx1 <- NA
       xx2 <- NA

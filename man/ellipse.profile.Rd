@@ -8,13 +8,13 @@ This routine approximates a contour of a function based on the profile
 of that function.
 }
 \usage{
-\method{ellipse}{profile}(x, which=c(1, 2), level=0.95, t=sqrt(qchisq(level, 2)), npoints=100)
+\method{ellipse}{profile}(x, which = c(1, 2), level = 0.95, t = sqrt(qchisq(level, 2)), 
+    npoints = 100)
 }
 \arguments{
 \item{x}{
-An object of class profile, typically the result of the profile()
-function applied to a fit by the ms() general maximum likelihood
-procedure.
+An object of class \code{\link{profile}}, e.g. from 
+\link[MASS:confint]{profile.glm} in the MASS package.
 }
 \item{which}{
 Which pair of parameters to use.
@@ -31,7 +31,7 @@ The square root of the value to be contoured.
 How many points to use in the ellipse.
 }}
 \value{
-An npoints x 2 matrix with columns having the chosen parameter names, 
+An \code{npoints} x \code{2} matrix with columns having the chosen parameter names, 
 which approximates a contour of the function that was profiled.
 }
 \details{
@@ -56,8 +56,8 @@ Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))
   * conc)/(K + conc), data = Puromycin,
   start = list(Vm = 160, delV = 40, K = 0.05))
 Pur.prof <- profile(Purboth)
-plot(ellipse(Pur.prof,which=c('Vm','K')),type='l')
-lines(ellipse(Purboth,which=c('Vm','K')),lty=2)
+plot(ellipse(Pur.prof, which = c('Vm', 'K')), type = 'l')
+lines(ellipse(Purboth, which = c('Vm', 'K')), lty = 2)
 }
-\keyword{ellipse}
-% Converted by Sd2Rd version 0.3-3.
+\keyword{dplot}
+\keyword{models}
