@@ -60,6 +60,8 @@ Purboth <- nls(formula = rate ~ ((Vm + delV * (state == "treated"))
 Pur.prof <- profile(Purboth)
 plot(ellipse(Pur.prof, which = c('Vm', 'K')), type = 'l')
 lines(ellipse(Purboth, which = c('Vm', 'K')), lty = 2)
+params <- Purboth$m$getPars()
+points(params['Vm'],params['K'])
 }
 \keyword{dplot}
 \keyword{models}

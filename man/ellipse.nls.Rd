@@ -46,7 +46,9 @@ require(nls)
 data(Puromycin)
 fit <- nls(rate ~ Vm*conc/(K + conc), data = Puromycin, subset = state=="treated", 
     start = list(K = 0.05, Vm = 200))
-plot(ellipse(fit), type = 'l')
+plot(ellipse(fit,which=c('Vm','K')), type = 'l')
+params <- fit$m$getPars()
+points(params['Vm'],params['K'])
 }
 \keyword{dplot}
 \keyword{nonlinear}
