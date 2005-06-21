@@ -11,3 +11,6 @@ Release History:
 
 0.2.14 (Aug 2004) - Allowed separate colors for each ellipse in plotcorr
 		    and fixed some .Rd errors.
+
+0.2.15 (May 2005) - Allowed plotcorr to plot just upper or lower triangle
+		    of matrix.
