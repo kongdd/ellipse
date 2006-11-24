@@ -14,3 +14,9 @@ Release History:
 
 0.2.15 (May 2005) - Allowed plotcorr to plot just upper or lower triangle
 		    of matrix.
+		    
+0.3.1 (June 2005) - Added NAMESPACE, package overview topic
+
+0.3.2 (Feb 2006)  - Remove deprecated install.R
+
+0.3.3 (Nov 2006)  - Nicer colors in plotcorr() example (from Gregor Gorjanc)

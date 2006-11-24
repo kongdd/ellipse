@@ -66,14 +66,18 @@ plotcorr(summary(fit, correlation = TRUE)$correlation)
 # ellipses
 plotcorr(summary(fit, correlation = TRUE)$correlation, numbers = TRUE)
 
-# Colour the ellipses to emphasize the differences
+# Colour the ellipses to emphasize the differences.  The color range
+# is based on RColorBrewer's Reds and Blues (suggested by Gregor Gorjanc)
+
 corr.mtcars <- cor(mtcars)
 ord <- order(corr.mtcars[1,])
 xc <- corr.mtcars[ord, ord]
-plotcorr(xc, col=cm.colors(11)[5*xc + 6])
+colors <- c("#A50F15","#DE2D26","#FB6A4A","#FCAE91","#FEE5D9","white",
+            "#EFF3FF","#BDD7E7","#6BAED6","#3182BD","#08519C")   
+plotcorr(xc, col=colors[5*xc + 6])
 
-plotcorr(xc, col=cm.colors(11)[5*xc + 6], type = "upper")
-plotcorr(xc, col=cm.colors(11)[5*xc + 6], type = "lower", diag = TRUE)
+plotcorr(xc, col=colors[5*xc + 6], type = "upper")
+plotcorr(xc, col=colors[5*xc + 6], type = "lower", diag = TRUE)
 par(save.par)
 }
 \keyword{hplot}

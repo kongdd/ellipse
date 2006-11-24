@@ -1,6 +1,6 @@
 Package: ellipse
-Version: 0.3-2
-Date: 2006-02-02
+Version: 0.3-3
+Date: 2006-11-24
 Title: Functions for drawing ellipses and ellipse-like confidence regions
 Author:  Duncan Murdoch <murdoch@stats.uwo.ca> and E. D. Chow 
     (porting to R by Jesus M. Frias Celayeta <iosu@bureau.ucc.ie>)
@@ -16,4 +16,4 @@ LazyLoad: yes
 License: This library was written by D. J. Murdoch and
     E. D. Chow. This software is licensed under the GPL terms. It
     is free software and comes with ABSOLUTELY NO WARRANTY.
-Packaged: Thu Feb  2 07:02:37 2006; murdoch
+Packaged: Fri Nov 24 15:34:36 2006; murdoch
