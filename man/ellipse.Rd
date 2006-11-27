@@ -10,7 +10,7 @@ for two parameters.
 }
 \usage{
 ellipse(x, \dots)
-ellipse.default(x, scale = c(1, 1), centre = c(0, 0), level = 0.95, 
+\method{ellipse}{default}(x, scale = c(1, 1), centre = c(0, 0), level = 0.95, 
     t = sqrt(qchisq(level, 2)), which = c(1, 2), npoints = 100, \dots)
 }
 \arguments{

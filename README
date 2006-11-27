@@ -20,3 +20,5 @@ Release History:
 0.3.2 (Feb 2006)  - Remove deprecated install.R
 
 0.3.3 (Nov 2006)  - Nicer colors in plotcorr() example (from Gregor Gorjanc)
+
+0.3.4 (Nov 2006)  - Update to strict test compliance
