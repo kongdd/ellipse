@@ -22,3 +22,5 @@ Release History:
 0.3.3 (Nov 2006)  - Nicer colors in plotcorr() example (from Gregor Gorjanc)
 
 0.3.4 (Nov 2006)  - Update to strict test compliance
+
+0.3.5 (Sep 2007)  - License clarification
