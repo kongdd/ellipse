@@ -1,6 +1,6 @@
 Package: ellipse
-Version: 0.3-5
-Date: 2007-09-05
+Version: 0.3-7
+Date: 2012-03-17
 Title: Functions for drawing ellipses and ellipse-like confidence
         regions
 Author: Duncan Murdoch <murdoch@stats.uwo.ca> and E. D. Chow (porting
@@ -14,8 +14,9 @@ Description: This package contains various routines for drawing
         described in Bates and Watts (1988), Nonlinear Regression
         Analysis and its Applications.
 Depends: R (>= 2.0.0),graphics,stats
+Suggests: MASS
 LazyLoad: yes
 License: GPL (>= 2)
-Packaged: Wed Sep 5 13:40:16 2007; murdoch
+Packaged: 2012-03-17 20:41:30 UTC; murdoch
 Repository: CRAN
-Date/Publication: 2007-09-06 18:14:07
+Date/Publication: 2012-03-17 22:31:58

@@ -4,5 +4,5 @@
 {
   s <- summary(x)
   ellipse.default(s$sigma^2 * s$cov.unscaled[which, which], 
-                  centre = x$m$getPars()[which], t = t)
+                  centre = x$m$getPars()[which], t = t, ...)
 }

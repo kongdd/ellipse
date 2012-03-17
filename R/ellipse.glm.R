@@ -7,5 +7,5 @@
   if (missing(t)) t <- ifelse(est.disp,sqrt(2 * qf(level, 2, s$df[2])),
 			                           sqrt(qchisq(level, 2)))
   ellipse.default(dispersion * s$cov.unscaled[which, which], 
-                  centre = x$coefficients[which], t = t, npoints = npoints)
+                  centre = x$coefficients[which], t = t, npoints = npoints, ...)
 }
