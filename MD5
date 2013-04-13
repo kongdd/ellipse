@@ -1,4 +1,4 @@
-ada7b6d436f9e8e98371b42673f4b6e0 *DESCRIPTION
+5cb6594dd0fec32696b1c795ff04253a *DESCRIPTION
 c0f8e06aa745d323551c9c17bc5080c4 *NAMESPACE
 73fea51373da9bbc4ff85c413745b526 *R/ellipse.R
 4be8275a614fcb4065c37b8762941247 *R/ellipse.arima0.R
@@ -22,4 +22,4 @@ a44b6aebadb5c6335f6e711b23152475 *man/ellipse.nls.Rd
 7c26b34627f1934d7b601edc1fa43b79 *man/ellipse.profile.glm.Rd
 a23b5bebb2dc3e1e01018fa9721db2f8 *man/ellipse.profile.nls.Rd
 966139fb90ef34fc4cf99889dde5005d *man/pairs.profile.Rd
-dc7f0035c051ff28ff045330004bc8dc *man/plotcorr.Rd
+a5e1d2e0c9bdebccc53aa17b95d7f4a4 *man/plotcorr.Rd

@@ -8,14 +8,10 @@ This function plots a correlation matrix using ellipse-shaped glyphs for
 each entry.  The ellipse represents a level curve of the density of a
 bivariate normal with the matching correlation.
 }
-\synopsis{
+\usage{
 plotcorr(corr, outline = TRUE, col = 'grey', numbers = FALSE, type = c("full","lower","upper"),
 	diag = (type == "full"), bty = "n", axes = FALSE, xlab = "", ylab = "", asp = 1,
 	cex.lab = par("cex.lab"), cex = 0.75*par("cex"), mar = 0.1 + c(2,2,4,2), ...)
-}
-\usage{
-plotcorr(corr, outline = TRUE, col = "grey", numbers = FALSE,
-  type = "full", diag = FALSE, \dots)
 }
 \arguments{
 \item{corr}{
@@ -36,9 +32,11 @@ place and placed on the plot.
 \item{type}{Character. Plot \code{"full"} matrix or just \code{"upper"} or
   \code{"lower"} triangular part of it.}
 \item{diag}{Logical. Plot diagonal elements or not. }
-\item{\dots}{
-Additional graphical parameters.
-}}
+\item{bty, axes, xlab, ylab, asp, mar, cex.lab, ...}{Graphical parameters
+which will be passed to \code{\link{plot}} when plotting.}
+\item{cex}{Graphical parameter
+which will be passed to \code{\link{text}} when plotting.}
+}
 \details{
 The ellipses being plotted will be tangent to a unit character square,
 with the shape chosen to match the required correlation.  If \code{numbers = FALSE},
