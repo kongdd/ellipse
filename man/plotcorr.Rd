@@ -9,9 +9,12 @@ each entry.  The ellipse represents a level curve of the density of a
 bivariate normal with the matching correlation.
 }
 \usage{
-plotcorr(corr, outline = TRUE, col = 'grey', numbers = FALSE, type = c("full","lower","upper"),
-	diag = (type == "full"), bty = "n", axes = FALSE, xlab = "", ylab = "", asp = 1,
-	cex.lab = par("cex.lab"), cex = 0.75*par("cex"), mar = 0.1 + c(2,2,4,2), ...)
+plotcorr(corr, outline = TRUE, col = 'grey', numbers = FALSE, 
+         type = c("full","lower","upper"),
+	       diag = (type == "full"), bty = "n", axes = FALSE,
+	       xlab = "", ylab = "", asp = 1,
+	       cex.lab = par("cex.lab"), cex = 0.75*par("cex"),
+	       mar = 0.1 + c(2,2,4,2), ...)
 }
 \arguments{
 \item{corr}{

@@ -1,3 +1,24 @@
+pairs <- function(x, ...) 
+  UseMethod("pairs")
+
+.pairs_default <- function(x, ...)
+  graphics::pairs(x, ...)
+
+.pairs_formula <- function(formula, data = NULL, ..., subset, na.action = stats::na.pass) {
+  # This code is copied from graphics:::pairs.formula
+  # because the non-standard evaluation wouldn't survive
+  # the indirect call.
+  
+  m <- match.call(expand.dots = FALSE)
+  if (is.matrix(eval(m$data, parent.frame()))) 
+    m$data <- as.data.frame(data)
+  m$... <- NULL
+  m$na.action <- na.action
+  m[[1L]] <- quote(stats::model.frame)
+  mf <- eval(m, parent.frame())
+  graphics::pairs(mf, ...)
+}
+
 "pairs.profile" <-
   function (x, labels = c(names(x), "Profile tau"), panel = lines, 
             invert = TRUE, plot.tau = TRUE, plot.trace = TRUE, plot.sketch = TRUE, 

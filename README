@@ -26,4 +26,11 @@ Release History:
 0.3.5 (Sep 2007)  - License clarification
 
 0.3.6 (Apr 2009)  - Bug fix:  ... was not being passed from methods to
-		    ellipse.default().
+		   ellipse.default().
+		   
+0.3.7 (Mar 2012)  - Minor fix (clean up DESCRIPTION file)
+
+0.3.8 (Apr 2013)  - Minor fix (no more \synopsis tag in help)
+		    
+0.4.1 (Jan 2018)  - At request of CRAN, added pairs() generic function to avoid
+       clash with MASS::pairs.profile, and other minor cleanups.

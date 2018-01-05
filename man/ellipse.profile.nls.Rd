@@ -8,8 +8,9 @@ This routine approximates a pairwise confidence region for a nonlinear regressio
 model.
 }
 \usage{
-\method{ellipse}{profile.nls}(x, which = c(1, 2), level = 0.95, t = sqrt(2 * qf(level, 2, attr(x, "summary")$df[2])), 
-    npoints = 100, \dots)
+\method{ellipse}{profile.nls}(x, which = c(1, 2), level = 0.95, 
+          t = sqrt(2 * qf(level, 2, attr(x, "summary")$df[2])), 
+          npoints = 100, \dots)
 }
 \arguments{
 \item{x}{

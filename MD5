@@ -1,5 +1,5 @@
-5cb6594dd0fec32696b1c795ff04253a *DESCRIPTION
-c0f8e06aa745d323551c9c17bc5080c4 *NAMESPACE
+ab362731acc035daf0a26a4174c260d6 *DESCRIPTION
+f1c594cb593f80cd82e09f1e562de22b *NAMESPACE
 73fea51373da9bbc4ff85c413745b526 *R/ellipse.R
 4be8275a614fcb4065c37b8762941247 *R/ellipse.arima0.R
 caee0c1cfc23e089ee9ba8f4b4798039 *R/ellipse.default.R
@@ -9,9 +9,9 @@ f3a81546119e55c3f45191add9fea049 *R/ellipse.lm.R
 1f6cc6a9602728096e1a5c17db75a3d1 *R/ellipse.profile.R
 179ff82c9db9ac24d7c28250d7dbd4ac *R/ellipse.profile.glm.R
 e9db7c17f6821149220b411bfd6441a6 *R/ellipse.profile.nls.R
-84c9bed516bd61a0b4d5a0a6aadda792 *R/pairs.profile.R
+51a4f27c99ed5d47d0ce1445435b49b9 *R/pairs.profile.R
 f410502cb27f5f2cfaee61bcf133abe3 *R/plotcorr.R
-99f607a6fdc968d3ac4feeda1f11bbd7 *README
+b58cd88bf88e9e6f2f4570d0db93c8bb *README
 c72cbb10c7117b72c4661f1e985e20e4 *man/ellipse-package.Rd
 a20be12fc0bc7bd5f179a90dcacfa291 *man/ellipse.Rd
 2a7bc110f3041d43ddd9ae601bf81912 *man/ellipse.arima0.Rd
@@ -20,6 +20,7 @@ a20be12fc0bc7bd5f179a90dcacfa291 *man/ellipse.Rd
 a44b6aebadb5c6335f6e711b23152475 *man/ellipse.nls.Rd
 0f2ec2da5cb8932fd631826ca008e366 *man/ellipse.profile.Rd
 7c26b34627f1934d7b601edc1fa43b79 *man/ellipse.profile.glm.Rd
-a23b5bebb2dc3e1e01018fa9721db2f8 *man/ellipse.profile.nls.Rd
-966139fb90ef34fc4cf99889dde5005d *man/pairs.profile.Rd
-a5e1d2e0c9bdebccc53aa17b95d7f4a4 *man/plotcorr.Rd
+d61933ab53fb8e18ae250244537e6413 *man/ellipse.profile.nls.Rd
+41184b50c2f136f5ba50f6884775a19b *man/pairs.Rd
+36e788f8569c1c414c7887c07715c4ed *man/pairs.profile.Rd
+fc500238b94fb8b704aba56a7abacd44 *man/plotcorr.Rd
