@@ -1,5 +1,5 @@
 Package: ellipse
-Version: 0.4.1
+Version: 0.4.1-9000
 Title: Functions for Drawing Ellipses and Ellipse-Like Confidence
         Regions
 Author: Duncan Murdoch <murdoch@stats.uwo.ca> and E. D. Chow 
@@ -19,3 +19,6 @@ NeedsCompilation: no
 Packaged: 2018-01-05 17:15:30 UTC; murdoch
 Repository: CRAN
 Date/Publication: 2018-01-05 23:52:13 UTC
+RoxygenNote: 6.1.1
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
